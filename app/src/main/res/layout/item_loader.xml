@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:application="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <ProgressBar
+        android:id="@+id/pbLoader"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:indeterminateTint="@color/yellow"
+        android:padding="8dp"
+        application:layout_constraintBottom_toBottomOf="parent"
+        application:layout_constraintEnd_toEndOf="parent"
+        application:layout_constraintStart_toStartOf="parent"
+        application:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

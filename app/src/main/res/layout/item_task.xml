@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:application="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clTask"
+    tools:background="@color/blue_gray_light"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:textSize="20sp"
+        android:textColor="@color/gray_light"
+        application:layout_constraintBottom_toTopOf="@+id/txtId"
+        application:layout_constraintStart_toStartOf="parent"
+        application:layout_constraintTop_toTopOf="parent"
+        application:layout_constraintVertical_chainStyle="packed"
+        tools:text="Fix bugs in app" />
+
+    <TextView
+        android:id="@+id/txtId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/gray_light"
+        application:layout_constraintBottom_toBottomOf="parent"
+        application:layout_constraintStart_toStartOf="parent"
+        application:layout_constraintTop_toBottomOf="@+id/txtName"
+        tools:text="TSK1635" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/textsBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        application:barrierDirection="end"
+        application:constraint_referenced_ids="txtName,txtId" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/task_status_background"
+        android:paddingBottom="4dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:textColor="@color/gray_dark"
+        android:textStyle="bold"
+        android:paddingTop="4dp"
+        android:textAllCaps="true"
+        application:layout_constraintEnd_toEndOf="parent"
+        application:layout_constraintTop_toTopOf="parent"
+        tools:text="OPEN" />
+
+    <Button
+        android:id="@+id/btnAction"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="@dimen/tasks_list_item_action_width_percent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:padding="8dp"
+        android:minHeight="0dp"
+        android:textColor="@color/gray_dark"
+        android:background="@drawable/task_action_background"
+        application:layout_constraintBottom_toBottomOf="parent"
+        application:layout_constraintEnd_toEndOf="parent"
+        application:layout_constraintHorizontal_bias="1.0"
+        application:layout_constraintStart_toEndOf="@id/textsBarrier"
+        application:layout_constraintTop_toBottomOf="@id/txtStatus"
+        tools:text="STARTWORK" />
+
+</android.support.constraint.ConstraintLayout>
